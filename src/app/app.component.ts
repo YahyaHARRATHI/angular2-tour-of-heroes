@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Hero } from './hero';
-
+import { HeroDetailComponent } from './hero-detail.component';
 
 const HEROES: Hero[] = [
   { id: 11, name: 'Mr. Nice' },
@@ -31,6 +31,7 @@ const HEROES: Hero[] = [
   </li>
 </ul>
 
+<my-hero-detail [hero]="selectedHero"></my-hero-detail>
 
   `,
   styles: [`
