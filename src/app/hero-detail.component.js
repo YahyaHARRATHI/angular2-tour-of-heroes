@@ -20,6 +20,11 @@ var HeroDetailComponent = (function () {
         this.route = route;
         this.location = location;
     }
+    HeroDetailComponent.prototype.save = function () {
+        var _this = this;
+        this.heroService.update(this.hero)
+            .then(function () { return _this.geBack(); });
+    };
     HeroDetailComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.route.params

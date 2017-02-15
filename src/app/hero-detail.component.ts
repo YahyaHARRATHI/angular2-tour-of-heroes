@@ -27,6 +27,14 @@ export /**
     private location: Location
   ) { }
 
+
+  save(): void { 
+
+this.heroService.update(this.hero)
+.then(()=>this.geBack());
+
+  }
+
   ngOnInit(): void {
     this.route.params
       .switchMap((params: Params) =>
